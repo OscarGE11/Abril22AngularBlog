@@ -1,0 +1,27 @@
+
+    <h1 class="text-center principal">Ciberseguridad</h1>
+    <div>
+        <img src="../../../assets/imagenes/protegete.jpg" class="w-100 h-auto mb-3">
+    </div>
+    
+
+    <div class="container text-center">
+        <div class="row align-items-start">
+            @for (item of articulos; track $index) {
+                <div class="col">
+                    <div class="card" style="width: 12rem;">
+                        <img src={{articulos[$index].imagen}} class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="principal">{{articulos[$index].nombre}}</h5>
+                          <p class="card-text">{{articulos[$index].textoDescriptivo}}</p>
+                          <a [routerLink]="['/articulo',$index]"><button class="btn-principal">Mas información</button></a>
+                        </div>
+                      </div>
+                  </div>
+            }
+          
+          
+        </div>
+      </div>
+    
+      
